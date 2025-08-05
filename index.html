@@ -1,147 +1,265 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APLKS Kotawaringin Barat</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asosiasi Petani Lestari Kelapa Sawit</title>
+
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
     }
 
+    /* Sticky Navbar */
     header {
-      background-color: #00aa13;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #007e3a;
       color: white;
-      padding: 1rem 2rem;
+      padding: 15px 30px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    header img {
-      height: 60px;
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
     }
 
     nav a {
       color: white;
+      margin-left: 20px;
       text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
+      font-weight: bold;
+      transition: color 0.3s;
     }
 
+    nav a:hover {
+      color: #c0ffb3;
+    }
+
+    /* Hero Section */
     .hero {
-      background-color: #e7f8ea;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00aa13;
-    }
-
-    .section {
-      padding: 2rem;
-      background-color: white;
-      margin: 1rem auto;
-      max-width: 900px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .section h2 {
-      color: #00aa13;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #00aa13;
+      background: url('https://images.unsplash.com/photo-1583301480437-1b3e1e29dd04?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 400px;
       color: white;
-      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero h2 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
+
+    /* Sections */
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .section h3 {
+      color: #007e3a;
+      margin-bottom: 20px;
+    }
+
+    /* Program Cards */
+    .programs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .program {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .program:hover {
+      transform: translateY(-5px);
+    }
+
+    .program h4 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004f2d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 22px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5b;
+    }
+
+    /* Google Maps */
+    .maps-container {
+      width: 100%;
+      height: 350px;
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 10px;
+        display: inline-block;
+      }
+
+      .programs {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
+
+  <!-- Font Awesome (for WhatsApp icon) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+  <!-- Header -->
   <header>
-    <div>
-      <img src="Logo (1).png" alt="Logo APLKS" />
-    </div>
+    <h1>Petani Lestari</h1>
     <nav>
+      <a href="#beranda">Beranda</a>
       <a href="#tentang">Tentang</a>
-      <a href="#visi">Visi & Misi</a>
-      <a href="#kegiatan">Kegiatan</a>
+      <a href="#program">Program</a>
+      <a href="#lokasi">Lokasi</a>
       <a href="#kontak">Kontak</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Asosiasi Petani Lestari Kelapa Sawit</h1>
-    <p>Kabupaten Kotawaringin Barat</p>
+  <!-- Hero -->
+  <section class="hero" id="beranda">
+    <h2>Asosiasi Petani Lestari Kelapa Sawit</h2>
+    <p>Bersama Menuju Pertanian Berkelanjutan & Sejahtera</p>
   </section>
 
+  <!-- Tentang Kami -->
   <section class="section" id="tentang">
-    <h2>Apa itu APLKS?</h2>
-    <p>Organisasi ini bernama Petani Lestari Kelapa Sawit Kotawaringin Barat yang berasal dari inisiatif petani Kabupaten Kotawaringin Barat.</p>
-    <h2>Tujuan</h2>
-    <ul>
-      <li>Menyediakan pelayanan bagi petani sawit yang ingin disertifikasi.</li>
-      <li>Internal Control System (ICS) tunggal.</li>
-      <li>Mendorong kepatuhan standar sawit berkelanjutan.</li>
-    </ul>
+    <h3>Tentang Kami</h3>
+    <p>
+      Kami adalah organisasi petani kelapa sawit yang berfokus pada pelestarian lingkungan dan peningkatan kesejahteraan petani. Dengan semangat gotong royong dan inovasi, kami mendorong praktik pertanian lestari yang mendukung produktivitas dan keberlanjutan.
+    </p>
   </section>
 
-  <section class="section" id="visi">
-    <h2>Visi</h2>
-    <p>Menjadi gerakan berbasis petani kelapa sawit yang terpercaya dan berkelanjutan.</p>
-    <h2>Misi</h2>
-    <ul>
-      <li>Mengembangkan kapasitas petani.</li>
-      <li>Memfasilitasi pemenuhan standar keberlanjutan.</li>
-      <li>Menguatkan legalitas petani.</li>
-      <li>Menjadi wadah sertifikasi petani.</li>
-    </ul>
+  <!-- Program -->
+  <section class="section" id="program">
+    <h3>Program & Layanan</h3>
+    <div class="programs">
+      <div class="program">
+        <h4>Pendidikan Petani</h4>
+        <p>Pelatihan intensif tentang praktik terbaik kelapa sawit ramah lingkungan dan efisiensi biaya produksi.</p>
+      </div>
+      <div class="program">
+        <h4>Sertifikasi ISPO/RSPO</h4>
+        <p>Pendampingan untuk memperoleh sertifikasi keberlanjutan kelapa sawit nasional dan internasional.</p>
+      </div>
+      <div class="program">
+        <h4>Akses Pasar</h4>
+        <p>Kemitraan strategis dan akses pasar global untuk produk petani dengan harga yang kompetitif.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section" id="kegiatan">
-    <h2>Kegiatan Utama</h2>
-    <ul>
-      <li>Penguatan kelompok petani</li>
-      <li>Pemetaan lahan</li>
-      <li>Pendampingan legalitas & STDB</li>
-      <li>Pendampingan sertifikasi</li>
-      <li>Akses pembiayaan & pemasaran</li>
-      <li>Pelatihan & asistensi pembibitan</li>
-    </ul>
+  <!-- Google Maps Lokasi -->
+  <section class="section" id="lokasi">
+    <h3>Lokasi Kami</h3>
+    <div class="maps-container">
+      <iframe 
+        src="https://www.google.com/maps/place/2%C2%B028'50.3%22S+111%C2%B045'26.2%22E/@-2.4806389,111.7559903,18z/data=!3m1!4b1!4m4!3m3!8m2!3d-2.4806389!4d111.7572778?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
-  <section class="section" id="kontak">
-    <h2>Kontak Kami</h2>
-    <p><strong>Alamat:</strong> Jl. A. Yani KM. 40, Desa Pangkalan Lada, Kab. Kotawaringin Barat, Kalimantan Tengah</p>
-    <p><strong>Email:</strong> aplks.kobar@gmail.com</p>
-    <p><strong>WhatsApp:</strong> 0823-11000-432</p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/aplkskobar" target="_blank">@aplkskobar</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 APLKS Kotawaringin Barat. Semua hak dilindungi.
+  <!-- Footer -->
+  <footer id="kontak">
+    <p>&copy; 2025 Asosiasi Petani Lestari Kelapa Sawit</p>
+    <p>Email: <a href="mailto:aplks.kobar@gmail.com" style="color: #b0ffb2;">kontak@petanilestari.org</a> | Telp: +62 812-3456-7890</p>
+    <p>Jl. A. Yani KM. 40, Desa Pangkalan Lada, Kec. Pangkalan Lada, Kab. Kotawaringin Barat, Kalimantan Tengah</p>
   </footer>
-</body>
 
+  <!-- WhatsApp Button -->
+  <a 
+    class="whatsapp-float" 
+    href="https://wa.me/082311000432" 
+    target="_blank" 
+    title="Hubungi via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
 </html>
