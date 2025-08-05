@@ -1,47 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APLKS Kotawaringin Barat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APLKS KOBAR - Asosiasi Petani Lestari Kelapa Sawit</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background-color: #155e27; color: white; padding: 20px; text-align: center; }
-    nav { display: flex; justify-content: center; background-color: #0e3d19; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; padding: 15px 20px; display: block; }
-    nav a:hover { background-color: #217a3c; }
-    .hero { background: url('https://source.unsplash.com/1600x600/?palm-oil,farmer') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 1px 1px 3px #000; text-align: center; }
-    .hero h1 { font-size: 3em; background-color: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 10px; }
-    section { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    footer { background-color: #155e27; color: white; text-align: center; padding: 20px; }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Asosiasi Petani Lestari Kelapa Sawit</h1>
-    <p>Kabupaten Kotawaringin Barat</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>APLKS KOTAWARINGIN BARAT</h1>
+      <p>Asosiasi Petani Lestari Kelapa Sawit</p>
+      <a href="pendaftaran.html" class="cta-button">Daftar Petani Sekarang</a>
+    </div>
   </header>
-  <nav>
-    <a href="#">Beranda</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#program">Program</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#artikel">Artikel</a>
-    <a href="#materi">Materi Edukasi</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#daftar">Daftar Anggota</a>
-  </nav>
-  <div class="hero">
-    <h1>Menuju Perkebunan Sawit yang Lestari dan Berkeadilan</h1>
-  </div>
-  <section id="tentang"><h2>Tentang Kami</h2><p>APLKS Kotawaringin Barat adalah organisasi petani sawit yang berkomitmen pada keberlanjutan dan kesejahteraan petani melalui pelatihan, advokasi, dan sertifikasi berstandar ISPO/RSPO.</p></section>
-  <section id="program"><h2>Program & Kegiatan</h2><p>Pelatihan petani, pendampingan sertifikasi, penguatan ICS dan koperasi.</p></section>
-  <section id="galeri"><h2>Galeri</h2><p><em>(Foto kegiatan akan ditampilkan di sini)</em></p></section>
-  <section id="artikel"><h2>Artikel / Berita</h2><p><em>(Berita atau artikel terbaru akan ditampilkan di sini)</em></p></section>
-  <section id="materi"><h2>Materi Edukasi / Pelatihan</h2><p><em>(Link unduhan PDF/DOCX akan diletakkan di sini)</em></p></section>
-  <section id="kontak"><h2>Kontak Kami</h2><p>Email: aplks.kobar@email.com</p><p>WhatsApp: 08xxxxxxxxxx</p><p>Alamat: Sekretariat APLKS, Kotawaringin Barat, Kalimantan Tengah</p></section>
-  <section id="daftar"><h2>Form Pendaftaran Anggota</h2><p>Silakan isi formulir pada link berikut:<br><a href="https://forms.gle/contoh-formulir" target="_blank">Buka Formulir</a></p></section>
-  <footer><p>&copy; 2025 APLKS Kotawaringin Barat. All rights reserved.</p></footer>
+
+  <!-- Sambutan -->
+  <section class="sambutan">
+    <h2>Sambutan Ketua</h2>
+    <p>Selamat datang di website resmi APLKS KOBAR. Kami adalah wadah perjuangan petani kelapa sawit yang berkomitmen pada keberlanjutan, kemitraan, dan kesejahteraan bersama. Melalui platform ini, kami berbagi informasi, membuka pendaftaran, dan mendokumentasikan setiap langkah menuju petani mandiri dan lestari.</p>
+  </section>
+
+  <!-- Highlight Kegiatan -->
+  <section class="kegiatan">
+    <h2>Kegiatan Terbaru</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/kegiatan1.jpg" alt="Kegiatan 1">
+        <h3>Pelatihan Petani Lestari</h3>
+        <p>Pelatihan teknik budidaya sawit ramah lingkungan di Desa Suka Maju.</p>
+      </div>
+      <div class="card">
+        <img src="img/kegiatan2.jpg" alt="Kegiatan 2">
+        <h3>Distribusi Pupuk Subsidi</h3>
+        <p>Distribusi tahap 1 pupuk urea kepada 120 petani anggota APLKS.</p>
+      </div>
+      <div class="card">
+        <img src="img/kegiatan3.jpg" alt="Kegiatan 3">
+        <h3>Rapat Koordinasi</h3>
+        <p>Evaluasi dan pelaporan semesteran kegiatan bersama mitra koperasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section class="galeri">
+    <h2>Galeri Kegiatan</h2>
+    <div class="foto-grid">
+      <img src="img/galeri1.jpg" alt="Galeri 1">
+      <img src="img/galeri2.jpg" alt="Galeri 2">
+      <img src="img/galeri3.jpg" alt="Galeri 3">
+      <img src="img/galeri4.jpg" alt="Galeri 4">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 APLKS KOBAR - Asosiasi Petani Lestari Kelapa Sawit Kotawaringin Barat</p>
+  </footer>
 </body>
 </html>
