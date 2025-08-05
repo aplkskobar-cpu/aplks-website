@@ -1,1 +1,0 @@
-// Animasi atau logika tambahan bisa ditambahkan di sini.
