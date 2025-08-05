@@ -1,47 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>APLKS Kotawaringin Barat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background-color: #155e27; color: white; padding: 20px; text-align: center; }
-    nav { display: flex; justify-content: center; background-color: #0e3d19; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; padding: 15px 20px; display: block; }
-    nav a:hover { background-color: #217a3c; }
-    .hero { background: url('https://source.unsplash.com/1600x600/?palm-oil,farmer') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 1px 1px 3px #000; text-align: center; }
-    .hero h1 { font-size: 3em; background-color: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 10px; }
-    section { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    footer { background-color: #155e27; color: white; text-align: center; padding: 20px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #00aa13;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background-color: #e7f8ea;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00aa13;
+    }
+
+    .section {
+      padding: 2rem;
+      background-color: white;
+      margin: 1rem auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: #00aa13;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #00aa13;
+      color: white;
+      margin-top: 2rem;
+    }
   </style>
 </head>
+
 <body>
   <header>
+    <div>
+      <img src="Logo (1).png" alt="Logo APLKS" />
+    </div>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#visi">Visi & Misi</a>
+      <a href="#kegiatan">Kegiatan</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
     <h1>Asosiasi Petani Lestari Kelapa Sawit</h1>
     <p>Kabupaten Kotawaringin Barat</p>
-  </header>
-  <nav>
-    <a href="#">Beranda</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#program">Program</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#artikel">Artikel</a>
-    <a href="#materi">Materi Edukasi</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#daftar">Daftar Anggota</a>
-  </nav>
-  <div class="hero">
-    <h1>Menuju Perkebunan Sawit yang Lestari dan Berkeadilan</h1>
-  </div>
-  <section id="tentang"><h2>Tentang Kami</h2><p>APLKS Kotawaringin Barat adalah organisasi petani sawit yang berkomitmen pada keberlanjutan dan kesejahteraan petani melalui pelatihan, advokasi, dan sertifikasi berstandar ISPO/RSPO.</p></section>
-  <section id="program"><h2>Program & Kegiatan</h2><p>Pelatihan petani, pendampingan sertifikasi, penguatan ICS dan koperasi.</p></section>
-  <section id="galeri"><h2>Galeri</h2><p><em>(Foto kegiatan akan ditampilkan di sini)</em></p></section>
-  <section id="artikel"><h2>Artikel / Berita</h2><p><em>(Berita atau artikel terbaru akan ditampilkan di sini)</em></p></section>
-  <section id="materi"><h2>Materi Edukasi / Pelatihan</h2><p><em>(Link unduhan PDF/DOCX akan diletakkan di sini)</em></p></section>
-  <section id="kontak"><h2>Kontak Kami</h2><p>Email: aplks.kobar@email.com</p><p>WhatsApp: 082311000432</p><p>Alamat:Jl. A. Yani KM. 40, Desa Pangkalan Lada, Kec. Pangkalan Lada, Kab. Kotawaringin Barat, Kalimantan Tengah </p></section>
-  <section id="daftar"><h2>Form Pendaftaran Anggota</h2><p>Silakan isi formulir pada link berikut:<br><a href="https://forms.gle/contoh-formulir" target="_blank">Buka Formulir</a></p></section>
-  <footer><p>&copy; 2025 APLKS Kotawaringin Barat. All rights reserved.</p></footer>
+  </section>
+
+  <section class="section" id="tentang">
+    <h2>Apa itu APLKS?</h2>
+    <p>Organisasi ini bernama Petani Lestari Kelapa Sawit Kotawaringin Barat yang berasal dari inisiatif petani Kabupaten Kotawaringin Barat.</p>
+    <h2>Tujuan</h2>
+    <ul>
+      <li>Menyediakan pelayanan bagi petani sawit yang ingin disertifikasi.</li>
+      <li>Internal Control System (ICS) tunggal.</li>
+      <li>Mendorong kepatuhan standar sawit berkelanjutan.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="visi">
+    <h2>Visi</h2>
+    <p>Menjadi gerakan berbasis petani kelapa sawit yang terpercaya dan berkelanjutan.</p>
+    <h2>Misi</h2>
+    <ul>
+      <li>Mengembangkan kapasitas petani.</li>
+      <li>Memfasilitasi pemenuhan standar keberlanjutan.</li>
+      <li>Menguatkan legalitas petani.</li>
+      <li>Menjadi wadah sertifikasi petani.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="kegiatan">
+    <h2>Kegiatan Utama</h2>
+    <ul>
+      <li>Penguatan kelompok petani</li>
+      <li>Pemetaan lahan</li>
+      <li>Pendampingan legalitas & STDB</li>
+      <li>Pendampingan sertifikasi</li>
+      <li>Akses pembiayaan & pemasaran</li>
+      <li>Pelatihan & asistensi pembibitan</li>
+    </ul>
+  </section>
+
+  <section class="section" id="kontak">
+    <h2>Kontak Kami</h2>
+    <p><strong>Alamat:</strong> Jl. A. Yani KM. 40, Desa Pangkalan Lada, Kab. Kotawaringin Barat, Kalimantan Tengah</p>
+    <p><strong>Email:</strong> aplks.kobar@gmail.com</p>
+    <p><strong>WhatsApp:</strong> 0823-11000-432</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/aplkskobar" target="_blank">@aplkskobar</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 APLKS Kotawaringin Barat. Semua hak dilindungi.
+  </footer>
 </body>
+
 </html>
