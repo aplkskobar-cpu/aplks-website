@@ -1,153 +1,63 @@
 
-* {
+body {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+  background: #fff;
   color: #333;
-  background-color: #fff;
 }
-
-.hero {
-  background: url('img/sawit-bg.jpg') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
   text-align: center;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.55);
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 9s infinite;
 }
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.slides img {
+  width: 100%;
+  height: auto;
 }
-
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #2E7D32;
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+.sambutan, .akses-cepat, .berita {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+h2 {
+  color: #2e7d32;
+}
+.tombol-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.tombol {
+  background-color: #66bb6a;
   color: white;
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
 }
-
-.sambutan, .kegiatan, .galeri, .tentang-kami, .visi-misi, .struktur, .formulir {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+.tombol:hover {
+  background-color: #388e3c;
 }
-
-.kegiatan .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.card {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.foto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.foto-grid img {
-  width: 100%;
-  border-radius: 10px;
-}
-
 footer {
-  background-color: #2E7D32;
-  color: white;
+  background-color: #f1f1f1;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.bagan-struktur img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-
-.hero-sawit {
-  background: url('img/bg-sawit.jpg') center/cover no-repeat;
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-.hero-sawit .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 3rem;
-  border-radius: 15px;
-  color: white;
-  backdrop-filter: blur(3px);
-}
-
-.hero-sawit h1 {
-  font-size: 3.5rem;
-  font-family: 'Merriweather', serif;
-}
-
-.hero-sawit p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.pola-dayak {
-  height: 60px;
-  background: url('img/pola-dayak.svg') center repeat-x;
-  background-size: contain;
-}
-
-.cta-button {
-  background-color: #C19A6B;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  margin-top: 1rem;
-  display: inline-block;
-  transition: background 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #A67C52;
+  padding: 20px;
+  font-size: 14px;
 }
